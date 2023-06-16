@@ -1,5 +1,6 @@
 import React from "react";
 import Time from "./Time";
+import TemperatureConvertor from "./TemperatureConvertor";
 
 export default function WeatherReport(props) {
   return (
@@ -17,13 +18,7 @@ export default function WeatherReport(props) {
             src={props.weatherData.iconUrl}
             alt={props.weatherData.description}
           />
-          <span className="temperature">
-            {Math.round(props.weatherData.temperature)}
-          </span>{" "}
-          <span className="unit-conversion">
-            <button className="celcius active">°C</button> |{" "}
-            <button className="fahrenheit inactive">°F</button>
-          </span>
+          <TemperatureConvertor tempData={props.weatherData} />
         </div>
         <div className="col-3">
           <li>
@@ -35,7 +30,7 @@ export default function WeatherReport(props) {
           <li>
             <h6 className="weather-info-heading">Wind Speed</h6>
             <p className="weather-info-value">
-              {Math.round(props.weatherData.wind * 3.6)}kmph
+              {Math.round(props.weatherData.wind * 3.6)} kmph
             </p>
           </li>
         </div>
@@ -49,7 +44,7 @@ export default function WeatherReport(props) {
           <li>
             <h6 className="weather-info-heading">Pressure</h6>
             <p className="weather-info-value">
-              {Math.round(props.weatherData.pressure)}mbar
+              {Math.round(props.weatherData.pressure)} mbar
             </p>
           </li>
         </div>
