@@ -18,7 +18,7 @@ export default function WeatherReport(props) {
             src={props.weatherData.iconUrl}
             alt={props.weatherData.description}
           />
-          <TemperatureConvertor tempData={props.weatherData} />
+          <TemperatureConvertor temperature={props.weatherData.temperature} />
         </div>
         <div className="col-3">
           <li>

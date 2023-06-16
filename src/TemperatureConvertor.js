@@ -12,9 +12,7 @@ export default function TemperatureConvertor(props) {
   if (tempUnit === "celcius") {
     return (
       <span className="TemperatureConvertor">
-        <span className="temperature">
-          {Math.round(props.tempData.temperature)}
-        </span>
+        <span className="temperature">{Math.round(props.temperature)}</span>
         <span className="unit-conversion">
           <button className="celcius active" onClick={convertToCelcius}>
             °C
@@ -30,7 +28,7 @@ export default function TemperatureConvertor(props) {
     return (
       <span className="TemperatureConvertor">
         <span className="temperature">
-          {Math.round((props.tempData.temperature * 9) / 5 + 32)}
+          {Math.round((props.temperature * 9) / 5 + 32)}
         </span>
         <span className="unit-conversion">
           <button className="celcius inactive" onClick={convertToCelcius}>
