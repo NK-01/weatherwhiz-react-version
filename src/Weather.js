@@ -16,7 +16,7 @@ export default function Weather() {
       name: response.data.name,
       time: response.data.dt,
       description: response.data.weather[0].description,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconCode: response.data.weather[0].icon,
       temperature: response.data.main.temp,
       realFeel: response.data.main.feels_like,
       humidity: response.data.main.humidity,
