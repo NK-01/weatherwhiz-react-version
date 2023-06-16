@@ -2,3 +2,13 @@
   max-width: 760px;
   margin: 80px auto;
 }
+
+.App .FooterLinks {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+.App .FooterLinks a {
+  color: #7843ff;
+}
