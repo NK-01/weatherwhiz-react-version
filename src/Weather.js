@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import Time from "./Time";
+import WeatherReport from "./WeatherReport";
 
 export default function Weather() {
   const [city, setCity] = useState("New Delhi");
@@ -48,53 +48,7 @@ export default function Weather() {
           />
           <button className=" btn btn-primary search-button">Search</button>
         </form>
-        <section>
-          <h1 className="mt-5 mb-2">{weatherInfo.name}</h1>
-          <ul className="time-description">
-            <Time time={weatherInfo.time} />
-            <li>{weatherInfo.description}</li>
-          </ul>
-        </section>
-        <div className="row">
-          <div className="col-6">
-            <img src={weatherInfo.iconUrl} alt={weatherInfo.description} />
-            <span className="temperature">
-              {Math.round(weatherInfo.temperature)}
-            </span>{" "}
-            <span className="unit-conversion">
-              <button className="celcius active">°C</button> |{" "}
-              <button className="fahrenheit inactive">°F</button>
-            </span>
-          </div>
-          <div className="col-3">
-            <li>
-              <h6 className="weather-info-heading">Real Feel</h6>
-              <p className="weather-info-value">
-                {Math.round(weatherInfo.realFeel)}°C
-              </p>
-            </li>
-            <li>
-              <h6 className="weather-info-heading">Wind Speed</h6>
-              <p className="weather-info-value">
-                {Math.round(weatherInfo.wind * 3.6)}kmph
-              </p>
-            </li>
-          </div>
-          <div className="col-3">
-            <li>
-              <h6 className="weather-info-heading">Humidity</h6>
-              <p className="weather-info-value">
-                {Math.round(weatherInfo.humidity)}%
-              </p>
-            </li>
-            <li>
-              <h6 className="weather-info-heading">Pressure</h6>
-              <p className="weather-info-value">
-                {Math.round(weatherInfo.pressure)}mbar
-              </p>
-            </li>
-          </div>
-        </div>
+        <WeatherReport weatherData={weatherInfo} />
       </div>
     );
   } else {
