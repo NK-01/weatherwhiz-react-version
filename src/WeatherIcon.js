@@ -25,7 +25,7 @@ export default function WeatherIcon(props) {
   const defaults = {
     icon: iconCodeMapping[props.weatherIconCode],
     color: "#000",
-    size: 62,
+    size: props.iconSize,
     animate: true,
   };
   return (

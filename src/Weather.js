@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherReport from "./WeatherReport";
-
+import WeatherForecast from "./WeatherForecast";
 export default function Weather() {
   const [city, setCity] = useState("New Delhi");
   const [weatherInfo, setWeatherInfo] = useState({});
@@ -11,7 +11,6 @@ export default function Weather() {
   }
 
   function getWeatherReport(response) {
-    console.log(response);
     setWeatherInfo({
       name: response.data.name,
       time: response.data.dt,
@@ -22,6 +21,7 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
+      coordinates: response.data.coord,
       loader: true,
     });
   }
@@ -49,6 +49,7 @@ export default function Weather() {
           <button className=" btn btn-primary search-button">Search</button>
         </form>
         <WeatherReport weatherData={weatherInfo} />
+        <WeatherForecast coordinate={weatherInfo.coordinates} />
       </div>
     );
   } else {

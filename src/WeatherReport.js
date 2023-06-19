@@ -1,10 +1,9 @@
 import React from "react";
 import Time from "./Time";
-import TemperatureConvertor from "./TemperatureConvertor";
+import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherReport(props) {
-  console.log(props.weatherData.iconCode);
   return (
     <div className="WeatherReport">
       <section>
@@ -19,8 +18,9 @@ export default function WeatherReport(props) {
           <WeatherIcon
             className="weather-icon"
             weatherIconCode={props.weatherData.iconCode}
+            iconSize={62}
           />
-          <TemperatureConvertor temperature={props.weatherData.temperature} />
+          <WeatherTemperature temperature={props.weatherData.temperature} />
         </div>
         <div className="col-3">
           <li>
