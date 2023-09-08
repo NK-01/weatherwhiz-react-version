@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+## Screenshot
+![Weather_app_using_react](https://github.com/NK-01/weatherwhiz-react-version/assets/72823658/d223930c-be25-43ca-b128-aae418fc3a4e)
+
+This is a screenshot of the Weather App in action. As you can see, the app displays the current weather conditions for the user's searched location, as well as a five-day forecast. The user can also search for the weather conditions in other locations using the search bar at the top.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
