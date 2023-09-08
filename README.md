@@ -3,6 +3,9 @@
 
 This is a screenshot of the Weather App in action. As you can see, the app displays the current weather conditions for the user's searched location, as well as a five-day forecast. The user can also search for the weather conditions in other locations using the search bar at the top.
 
+## Click on the link below to explore my project
+👉 [**View My Project**](https://bucolic-baklava-453ac4.netlify.app/).
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
